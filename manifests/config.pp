@@ -18,6 +18,7 @@ class vim::config inherits vim {
 
   exec { "vim +PluginInstall +qall":
     subscribe   => File['/etc/vimrc'],
+    refreshonly => true,
     path        => ["/usr/bin"]
   }
 }
