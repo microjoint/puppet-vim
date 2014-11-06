@@ -1,0 +1,27 @@
+[submodule "files/bundle/syntastic"]
+	path = files/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "files/bundle/tabular"]
+	path = files/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "files/bundle/vim-addon-mw-utils"]
+	path = files/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "files/bundle/vimoutliner"]
+	path = files/bundle/vimoutliner
+	url = https://github.com/vimoutliner/vimoutliner.git
+[submodule "files/bundle/vim-puppet"]
+	path = files/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
+[submodule "files/bundle/vim-snipmate"]
+	path = files/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "files/bundle/vim-snippets"]
+	path = files/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "files/bundle/vim-surround"]
+	path = files/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "files/bundle/vimwiki"]
+	path = files/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git

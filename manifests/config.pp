@@ -1,7 +1,7 @@
 class vim::config inherits vim {
 
   file {$global_vimrc:
-    ensure  => present,
+    ensure  => file,
     source  => 'puppet:///modules/vim/vimrc'
   }
 
