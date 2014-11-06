@@ -108,7 +108,7 @@ set tm=500
 
 " Colours and fonts {
 syntax enable                       " Syntac highlighting
-colorscheme desert256
+colorscheme zellner
 set t_Co=256
 set background=dark                 " Dark backgroud
 if has("gui_running")			    " Extra GUI options
