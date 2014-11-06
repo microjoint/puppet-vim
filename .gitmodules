@@ -25,3 +25,6 @@
 [submodule "files/bundle/vimwiki"]
 	path = files/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "files/colors"]
+	path = files/colors
+	url = https://github.com/flazz/vim-colorschemes.git

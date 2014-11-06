@@ -10,43 +10,9 @@ if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 " }
-" Vundle {
 set nocompatible               " be iMproved
-filetype off                   " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
-Bundle 'vimwiki/vimwiki'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'vimoutliner/vimoutliner'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
-Bundle 'rodjek/vim-puppet'
-Bundle 'godlygeek/tabular'
-Bundle 'honza/vim-snippets'
-Bundle 'garbas/vim-snipmate'
-
-" Github repos of the user 'vim-scripts'
-" => can omit the username part
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
-
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
-" ...
-
-call vundle#end()
-
-filetype plugin indent on     " required!
-" }
 " }
 " }
 " General {
@@ -108,7 +74,7 @@ set tm=500
 
 " Colours and fonts {
 syntax enable                       " Syntac highlighting
-colorscheme zellner
+colorscheme desert256
 set t_Co=256
 set background=dark                 " Dark backgroud
 if has("gui_running")			    " Extra GUI options
