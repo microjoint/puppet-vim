@@ -1,11 +1,11 @@
 class vim::params {
   $config 	= undef
-  $global_vimrc = '/etc/vim/vimrc'
   
   case $::osfamily {
     'Debian': {
       $package = {
         'vim' => {},
+	'vim-puppet' => {},
         }
     }
     'Archlinux': {

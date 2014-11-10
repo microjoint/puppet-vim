@@ -23,7 +23,7 @@
   " }
 
   " General {
-    filetype plugin indent on     " detect file types
+    filetype plugin indent on     	  " detect file types
     syntax on                     " syntax highlighting
     " set mouse=a                 " enable mouse usage
     set mousehide                 " hide mouse cursor while typing
