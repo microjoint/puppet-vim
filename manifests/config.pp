@@ -1,3 +1,4 @@
+#
 class vim::config inherits vim {
 
   if $config {

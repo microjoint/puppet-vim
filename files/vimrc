@@ -13,6 +13,33 @@
       set background=dark   " we like in this way
     " }
 
+    " Vundle {
+      filetype off          " required
+
+      set rtp+=~/.vim/bundle/Vundle.vim
+      call vundle#begin()
+      " alternatively, pass a path where Vundle should install plugins
+      " call vundle#begin('~/some/path/here')
+      "
+      " let Vundle manage Vundle, required
+      Plugin 'gmarik/Vundle.vim'
+
+      Plugin 'scrooloose/syntastic'
+      Plugin 'bling/vim-airline'
+      Plugin 'godlygeek/tabular'
+      Plugin 'MarcWeber/vim-addon-mw-utils'
+      Plugin 'rodjek/vim-puppet'
+      Plugin 'garbas/vim-snipmate'
+      Plugin 'honza/vim-snippets'
+      Plugin 'tpope/vim-surround'
+      Plugin 'vimoutliner/vimoutliner'
+      Plugin 'vim-scripts/vimwiki'
+      Plugin 'kien/ctrlp.vim'
+
+      " All of your Plugins must be added before the following line
+      call vundle#end()     " required
+    " }
+
     " Windows Compatible {
       " On Windows, also use '.vim' instead of 'vimfiles'; this makes
       " syncronisation across system easier. Also make all keys work 
@@ -36,6 +63,7 @@
     set virtualedit=onemore   " allow cursor beyond end
     set history=1000              " how much history to save
     set nospell
+    set clipboard=unnamed
 
     " Setting up the directories {
       set backup                  " nice to have backups, let's put them
@@ -62,34 +90,35 @@
   " }
   
   " Vim UI {
+    set t_Co=256
     colorscheme desert256          " load a colorscheme
     set showmode                   " display the current mode
     set cursorline                 " highlight the current line
     hi cursorline guibg=\#333333   " highlight bg color
     hi cursorColunm guibg=\#333333 " highlight cursor
 
-    if has('cmdline_info')
-      set ruler                    " show ruler
-      "set rulerformat=%30(%=\\:b%n%y%m%r%w\\ %l,%c%V\\ %P%) " what a ruler
-      set rulerformat=%<%f%<%{FileTime()}%<%h%m%r%=%-20.(line=%03l,col=%02c%V,totlin=%L%)\%h%m%r%=%-30(,BfNm=%n%Y%)\%P\*%=%{CurTime()}
-      set showcmd                  " show partial commands in status line 
-  endif
+    "if has('cmdline_info')
+      " set ruler                    " show ruler
+      " set rulerformat=%30(%=\\:b%n%y%m%r%w\\ %l,%c%V\\ %P%) " what a ruler
+      " set rulerformat=%<%f%<%{FileTime()}%<%h%m%r%=%-20.(line=%03l,col=%02c%V,totlin=%L%)\%h%m%r%=%-30(,BfNm=%n%Y%)\%P\*%=%{CurTime()}
+      " set showcmd                  " show partial commands in status line 
+    "endif
   
   if has('statusline')
     set laststatus=2
-
-    " Broken down into segments
-      set statusline=%t             "tail of the filename
-      set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-      set statusline+=%{&ff}]       "file format
-      set statusline+=%h            "help file flag
-      set statusline+=%m            "modified flag
-      set statusline+=%r            "read only flag
-      set statusline+=%y            "filetype
-      set statusline+=%=            "left/right separator
-      set statusline+=%c            "cursor column
-      set statusline+=%l/%L         "cursor line/total lines
-      set statusline+=\ %P          "percent through file
+"
+    "" Broken down into segments
+      "set statusline=%t             "tail of the filename
+      "set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+      "set statusline+=%{&ff}]       "file format
+      "set statusline+=%h            "help file flag
+      "set statusline+=%m            "modified flag
+      "set statusline+=%r            "read only flag
+      "set statusline+=%y            "filetype
+      "set statusline+=%=            "left/right separator
+      "set statusline+=%c            "cursor column
+      "set statusline+=%l/%L         "cursor line/total lines
+      "set statusline+=\ %P          "percent through file
   endif
 
   set backspace=indent,eol,start  " backspace galore
@@ -130,14 +159,19 @@
     " location
     let mapleader = ','
 
+    " Escape button is too far away
+    imap ii  <Esc>
+
     " quick save
     map <Esc><Esc> :w<CR>
+
 
     " Press space to clear highlighting and any message already displayed
     nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
     " Making it so ; works like for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
-    noremap ; :
+    nnoremap ; :
+    nnoremap : ;                   " So we can still use F, f and T and t
 
     " Easier moving in tabs and windows
     map <C-J> <C-W>j<C-W>_
