@@ -1,5 +1,5 @@
 " Modeline and Notes {
-  " vim: set foldmarker={,} foldlevel=1 foldmethod=marker:
+  " vim: set foldmarker={,} foldlevel=1 foldmethod=marker nospell:
   "
   "   This is a personal .vimrc file taken mainly from Steve Francia,
   "   http://spf13.com/post/perfect-vimrc-vim-config-file. Other bits
@@ -122,7 +122,7 @@
     set smarttab                  " 
     set pastetoggle=<F12>         " toggle safer pastes
     " Remove trailing whitespaces and \^M chars
-    autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\\\s\\\\+$","","")'))
+    " autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\\\s\\\\+$","","")'))
     " }
 
   " Key (re)Mappings {

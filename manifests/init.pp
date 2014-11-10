@@ -1,7 +1,5 @@
-class vim (
-  $config 	= $vim::params::config,
-  $global_vimrc = $vim::params::global_vimrc
-) inherits vim::params {
+#
+class vim inherits vim::params {
 
   include '::vim::install'
   include '::vim::config'
