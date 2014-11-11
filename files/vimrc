@@ -25,6 +25,7 @@
       Plugin 'gmarik/Vundle.vim'
 
       Plugin 'scrooloose/syntastic'
+      Plugin 'vim-scripts/tlib'
       Plugin 'bling/vim-airline'
       Plugin 'godlygeek/tabular'
       Plugin 'MarcWeber/vim-addon-mw-utils'
