@@ -58,6 +58,7 @@
     set autochdir                 " switch to current file
     scriptencoding utf-8
     set autowrite                 " write a file when leaving modified buffer
+    set autowriteall              " writa a file for all commands
     set autoread                  " auto read file if changed
     set shortmess+=filmnrxoOtIT   " abrrev. messages
     set viewoptions=folds,options,cursor,unix,slash   " save all
@@ -92,7 +93,7 @@
   
   " Vim UI {
     set t_Co=256
-    colorscheme desert256          " load a colorscheme
+    colorscheme oceanblack256      " load a colorscheme
     set showmode                   " display the current mode
     set cursorline                 " highlight the current line
     hi cursorline guibg=\#333333   " highlight bg color
