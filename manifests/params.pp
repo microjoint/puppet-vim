@@ -1,16 +1,18 @@
+#
 class vim::params {
   $config 	= undef
   
   case $::osfamily {
     'Debian': {
       $package = {
-        'vim' => {},
-	'vim-puppet' => {},
+        'vim'        => {},
+        'vim-gtk'    => {},
+        'vim-puppet' => {},
         }
     }
     'Archlinux': {
       $package = {
-        'vim' => {},
+        'vim'                  => {},
         'vim-colorsamplerpack' => {}
       }
     }

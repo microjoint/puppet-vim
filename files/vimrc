@@ -167,6 +167,11 @@
     " quick save
     map <Esc><Esc> :w<CR>
 
+    " movement keys to change windows
+    map <Up>    <C-W>k
+    map <Down>  <C-W>j
+    map <Left>  <C-W>h
+    map <Right> <C-W>l
 
     " Press space to clear highlighting and any message already displayed
     nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
