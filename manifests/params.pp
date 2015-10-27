@@ -1,7 +1,7 @@
 #
 class vim::params {
-  $config 	= undef
-  
+  $config   = undef
+
   case $::osfamily {
     'Debian': {
       $package = {
@@ -19,12 +19,14 @@ class vim::params {
     'Linux': {
       case $::operatingsystem {
         default: {
-          fail("The ${module_name} module is not supported on an ${::operatingsystem} distribution.")
+          fail("The ${module_name} module is not supported on an \
+          ${::operatingsystem} distribution.")
         }
       }
     }
     default: {
-      fail("The ${module_name} module is not supported on an ${::osfamily} based system.")
+      fail("The ${module_name} module is not supported on an \
+      ${::osfamily} based system.")
     }
   }
 }

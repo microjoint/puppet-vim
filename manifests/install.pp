@@ -1,6 +1,7 @@
+#
 class vim::install inherits vim {
 
-  $defaults = { 
+  $defaults = {
     ensure => latest
   }
 
