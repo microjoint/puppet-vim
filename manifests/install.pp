@@ -20,5 +20,6 @@ class vim::install inherits vim {
   file{ '/usr/share/vim/vim74/colors':
     ensure => link,
     target => '/usr/share/repo/colors/colors',
+    force  => true,
   }
 }
