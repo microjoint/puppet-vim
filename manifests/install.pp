@@ -21,7 +21,7 @@ class vim::install inherits vim {
     path        => ['/usr/bin'],
     cwd         => '/usr/share/vim/vim74/colors',
     command     => 'rsync -a colors/ .',
-    subscribe   => Vcsrepo['/usr/share/vim/vim74/colors'],
+    subscribe   => Vcsrepo['/usr/share/vim/vim74'],
     refreshonly => true,
   }
 }
