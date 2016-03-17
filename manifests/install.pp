@@ -17,11 +17,8 @@ class vim::install inherits vim {
   # sort out the vim colors, when we clone it already has a
   # 'colors' sub-directory
 
-  #exec{'move_vim_colors':
-  #  path        => ['/usr/bin'],
-  #  cwd         => '/usr/share/vim/vim74/colors',
-  #  command     => 'rsync -a colors/ .',
-  #  subscribe   => Vcsrepo['/usr/share/vim/vim74'],
-  #  refreshonly => true,
-  #}
+  file{ '/usr/share/vim/vim74/colors':
+    ensure => link,
+    target => '/usr/share/repo/colors/colors',
+  }
 }
