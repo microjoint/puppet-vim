@@ -9,7 +9,7 @@ class vim::install inherits vim {
 
   vcsrepo{ '/usr/share/repo/colors':
     ensure   => latest,
-    force    => true,
+    #force    => true,
     source   => 'https://github.com/flazz/vim-colorschemes.git',
     provider => git,
     require  => File['/usr/share/repo'],
