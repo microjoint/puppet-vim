@@ -9,7 +9,6 @@ class vim::install inherits vim {
 
   vcsrepo{ '/usr/share/repo/colors':
     ensure   => latest,
-    #force    => true,
     source   => 'https://github.com/flazz/vim-colorschemes.git',
     provider => git,
     require  => File['/usr/share/repo'],
@@ -18,9 +17,9 @@ class vim::install inherits vim {
   # sort out the vim colors, when we clone it already has a
   # 'colors' sub-directory
 
-  #file{ '/usr/share/vim/vim74/colors':
-  #  ensure => link,
-  #  target => '/usr/share/repo/colors/colors',
-  #  force  => true,
-  #}
+  file{ '/usr/share/vim/vim74/colors':
+    ensure => link,
+    target => '/usr/share/repo/colors/colors',
+    force  => true,
+  }
 }
