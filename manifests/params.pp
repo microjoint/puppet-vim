@@ -7,7 +7,6 @@ class vim::params {
       $package = {
         'vim'        => {},
         'vim-gtk'    => {},
-        'vim-puppet' => {},
         }
     }
     'Archlinux': {
